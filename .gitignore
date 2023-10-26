@@ -23,4 +23,8 @@
 **/*.sln
 **/*.sw?
 
+# Security
 **/.env
+
+# Optimization Suggestions
+**/optimization/
