@@ -1,8 +1,11 @@
 import React from 'react';
+import Stopwatch from './components/Stopwatch';
 
 function App() {
   return (
-    <h1 className="text-3xl text-red-500">Hello</h1>
+    <div className="flex h-screen flex-col gap-y-4 bg-black">
+      <Stopwatch />
+    </div>
   );
 }
 
