@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function DisplayTimer({ hours, minutes, seconds }) {
+function TimeDisplay({ hours, minutes, seconds }) {
   const formatNumber = (num) => {
     if (num < 10) {
       return `0${num}`;
@@ -29,10 +29,10 @@ function DisplayTimer({ hours, minutes, seconds }) {
   );
 }
 
-DisplayTimer.propTypes = {
+TimeDisplay.propTypes = {
   hours: PropTypes.number.isRequired,
   minutes: PropTypes.number.isRequired,
   seconds: PropTypes.number.isRequired,
 };
 
-export default DisplayTimer;
+export default TimeDisplay;

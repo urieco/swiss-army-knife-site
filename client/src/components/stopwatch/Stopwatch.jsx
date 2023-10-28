@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AiFillPauseCircle, AiFillPlayCircle } from 'react-icons/ai';
 import { GrPowerReset } from 'react-icons/gr';
-import DisplayTimer from './DisplayTimer';
+import TimeDisplay from './subcomponents/TimeDisplay';
 
 function Stopwatch() {
   const [isRunning, setIsRunning] = useState(false);
@@ -71,7 +71,7 @@ function Stopwatch() {
           onClick={reset}
         />
       </button>
-      <DisplayTimer
+      <TimeDisplay
         hours={time.h}
         minutes={time.m}
         seconds={time.s}
