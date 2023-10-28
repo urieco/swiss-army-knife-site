@@ -13,7 +13,7 @@ function TimeDisplay({ hours, minutes, seconds }) {
   };
 
   return (
-    <div className="text-2xl text-white">
+    <div className="text-2xl">
       <span className="mx-2 border p-2 text-red-400">
         {formatNumber(hours)}
       </span>
