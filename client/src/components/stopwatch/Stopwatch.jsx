@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { AiFillPauseCircle, AiFillPlayCircle } from 'react-icons/ai';
 import { GrPowerReset } from 'react-icons/gr';
 import TimeDisplay from './subcomponents/TimeDisplay';
+import StopwatchLabel from './subcomponents/StopwatchLabel';
 
 function Stopwatch() {
   const [isRunning, setIsRunning] = useState(false);
@@ -43,7 +44,7 @@ function Stopwatch() {
   };
 
   return (
-    <div className="m-5 flex gap-2">
+    <div className="m-auto flex gap-2">
       <button
         type="button"
       >
@@ -51,13 +52,13 @@ function Stopwatch() {
         isRunning
           ? (
             <AiFillPauseCircle
-              className="h-10 w-auto cursor-pointer rounded-full border border-white text-red-500 active:border-none"
+              className="mr-2 h-12 w-auto cursor-pointer rounded-full border border-white text-red-500 active:border-none"
               onClick={stop}
             />
           )
           : (
             <AiFillPlayCircle
-              className="h-10 w-auto cursor-pointer rounded-full border border-white text-green-500 active:border-none"
+              className="mr-2 h-12 w-auto cursor-pointer rounded-full border border-white text-green-500 active:border-none"
               onClick={start}
             />
           )
@@ -67,7 +68,7 @@ function Stopwatch() {
         type="button"
       >
         <GrPowerReset
-          className="h-10 w-auto cursor-pointer rounded-full border border-white bg-gray-200 duration-500 active:rotate-90 active:scale-95"
+          className="mr-2 h-12 w-auto cursor-pointer rounded-full bg-gray-200 duration-300 active:rotate-180 active:scale-95"
           onClick={reset}
         />
       </button>
@@ -76,6 +77,7 @@ function Stopwatch() {
         minutes={time.m}
         seconds={time.s}
       />
+      <StopwatchLabel />
     </div>
   );
 }

@@ -13,18 +13,18 @@ function TimeDisplay({ hours, minutes, seconds }) {
   };
 
   return (
-    <div className="text-2xl">
-      <span className="mx-2 border p-2 text-red-400">
+    <div className="flex text-2xl">
+      <div className="mx-2 rounded-lg border p-2 text-red-400">
         {formatNumber(hours)}
-      </span>
-      <span className="mx-2">:</span>
-      <span className="mx-2 border p-2 text-orange-400">
+      </div>
+      <div className="p-2">:</div>
+      <div className="mx-2 rounded-lg border p-2 text-orange-400">
         {formatNumber(minutes)}
-      </span>
-      <span className="mx-2">:</span>
-      <span className="mx-2 border p-2 text-yellow-400">
+      </div>
+      <div className="p-2">:</div>
+      <div className="mx-2 rounded-lg border p-2 text-yellow-400">
         {formatNumber(seconds)}
-      </span>
+      </div>
     </div>
   );
 }
