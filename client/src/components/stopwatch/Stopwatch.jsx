@@ -44,7 +44,7 @@ function Stopwatch() {
   };
 
   return (
-    <div className="m-auto flex gap-2">
+    <div className="flex gap-2">
       <button
         type="button"
       >
