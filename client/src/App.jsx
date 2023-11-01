@@ -1,10 +1,10 @@
 import React from 'react';
-import Stopwatch from './components/stopwatch/Stopwatch';
+import StopwatchPanel from './components/StopwatchPanel';
 
 function App() {
   return (
     <div className="flex h-screen flex-col items-center gap-y-4 bg-black text-white">
-      <Stopwatch />
+      <StopwatchPanel />
     </div>
   );
 }

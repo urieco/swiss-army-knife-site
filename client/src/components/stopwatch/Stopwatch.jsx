@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { AiFillPauseCircle, AiFillPlayCircle } from 'react-icons/ai';
 import { GrPowerReset } from 'react-icons/gr';
+import PropTypes from 'prop-types';
 import TimeDisplay from './subcomponents/TimeDisplay';
 import StopwatchLabel from './subcomponents/StopwatchLabel';
 
-function Stopwatch() {
+function Stopwatch({ index }) {
   const [isRunning, setIsRunning] = useState(false);
   const [time, setTime] = useState({ s: 0, m: 0, h: 0 });
   const [interv, setInterv] = useState();
@@ -44,7 +45,7 @@ function Stopwatch() {
   };
 
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-2" data-index={index}>
       <button
         type="button"
       >
@@ -81,5 +82,9 @@ function Stopwatch() {
     </div>
   );
 }
+
+Stopwatch.propTypes = {
+  index: PropTypes.number.isRequired,
+};
 
 export default Stopwatch;
