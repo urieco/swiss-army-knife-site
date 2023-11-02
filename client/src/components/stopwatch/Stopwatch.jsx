@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { AiFillPauseCircle, AiFillPlayCircle } from 'react-icons/ai';
 import { GrPowerReset } from 'react-icons/gr';
-import PropTypes from 'prop-types';
 import TimeDisplay from './subcomponents/TimeDisplay';
 import StopwatchLabel from './subcomponents/StopwatchLabel';
 
-function Stopwatch({ index }) {
+function Stopwatch({ deleteStopwatch }) {
   const [isRunning, setIsRunning] = useState(false);
   const [time, setTime] = useState({ s: 0, m: 0, h: 0 });
   const [interv, setInterv] = useState();
@@ -45,7 +45,7 @@ function Stopwatch({ index }) {
   };
 
   return (
-    <div className="flex gap-2" data-index={index}>
+    <div className="flex gap-2">
       <button
         type="button"
       >
@@ -65,26 +65,29 @@ function Stopwatch({ index }) {
           )
       }
       </button>
-      <button
-        type="button"
-      >
-        <GrPowerReset
-          className="mr-2 h-12 w-auto cursor-pointer rounded-full bg-gray-200 duration-300 active:rotate-180 active:scale-95"
-          onClick={reset}
-        />
-      </button>
+      <GrPowerReset
+        className="mr-2 h-12 w-auto cursor-pointer rounded-full bg-gray-200 duration-300 active:rotate-180 active:scale-95"
+        onClick={reset}
+      />
       <TimeDisplay
         hours={time.h}
         minutes={time.m}
         seconds={time.s}
       />
       <StopwatchLabel />
+      <button
+        type="button"
+        className="m-1 select-none rounded bg-red-500 px-3 text-2xl font-bold text-black shadow-sm shadow-white active:shadow-none"
+        onClick={deleteStopwatch}
+      >
+        X
+      </button>
     </div>
   );
 }
 
 Stopwatch.propTypes = {
-  index: PropTypes.number.isRequired,
+  deleteStopwatch: PropTypes.func.isRequired,
 };
 
 export default Stopwatch;

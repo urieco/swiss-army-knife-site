@@ -19,7 +19,7 @@ function StopwatchLabel() {
   };
 
   return (
-    <span className="relative text-2xl">
+    <div className="relative text-2xl">
       {
         edit
           ? (
@@ -62,7 +62,7 @@ function StopwatchLabel() {
             </div>
           )
       }
-    </span>
+    </div>
   );
 }
 
