@@ -13,15 +13,15 @@ function TimeDisplay({ hours, minutes, seconds }) {
   };
 
   return (
-    <div className="mx-2 flex gap-2 text-2xl">
+    <div className="flex items-center justify-between gap-2 text-2xl md:mx-2">
       <div className="rounded-lg border p-2 text-red-400">
         {formatNumber(hours)}
       </div>
-      <div className="p-2">:</div>
+      <div className="py-2">:</div>
       <div className="rounded-lg border p-2 text-orange-400">
         {formatNumber(minutes)}
       </div>
-      <div className="p-2">:</div>
+      <div className="py-2">:</div>
       <div className="rounded-lg border p-2 text-yellow-400">
         {formatNumber(seconds)}
       </div>

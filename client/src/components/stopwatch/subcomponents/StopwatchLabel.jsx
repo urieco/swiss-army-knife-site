@@ -19,44 +19,44 @@ function StopwatchLabel() {
   };
 
   return (
-    <div className="relative text-2xl">
+    <div className="w-full">
       {
         edit
           ? (
-            <>
+            <div className="grid h-12 grid-cols-12 gap-x-2 text-2xl">
               <input
                 name="stopwatchLabel"
-                className="h-full rounded-lg border-none p-1 text-black"
+                className="col-span-8 h-full rounded-lg border-none pl-2 text-2xl text-black"
                 placeholder={!label ? 'Label' : label}
                 onChange={(e) => setLabel(e.currentTarget.value)}
                 onKeyDown={handleKeyDown}
               />
+              <input
+                type="color"
+                name="labelColorPicker"
+                  // eslint-disable-next-line tailwindcss/classnames-order
+                className="col-span-2 appearance-none w-auto h-full border-2 cursor-pointer"
+                value={labelColor}
+                onChange={(e) => setLabelColor(e.target.value)}
+              />
               <button
                 type="button"
                 name="labelPicker"
-                className="absolute right-1 top-1 rounded-lg bg-green-500 p-2 shadow-lg active:scale-95 active:shadow-none"
+                className="col-span-2 flex items-center justify-center rounded-lg bg-green-500 text-2xl shadow-sm shadow-white active:scale-95 active:shadow-none"
                 onClick={() => setEdit(false)}
               >
                 <AiOutlineArrowRight />
               </button>
-              <input
-                type="color"
-                name="labelColorPicker"
-                // eslint-disable-next-line tailwindcss/classnames-order
-                className="appearance-none absolute right-12 top-[0.2rem] h-[90%] w-12 border-4 cursor-pointer"
-                value={labelColor}
-                onChange={(e) => setLabelColor(e.target.value)}
-              />
-            </>
+            </div>
           )
           : (
             <div
-              className="flex h-full rounded-lg border px-4 pt-1"
+              className="flex justify-between rounded-lg border px-2 pt-2 text-2xl"
               style={labelBorderColorStyle}
             >
               {label}
               <AiFillEdit
-                className="my-2 ml-4 mr-0 cursor-pointer"
+                className="my-2 cursor-pointer"
                 onClick={() => setEdit(true)}
               />
             </div>

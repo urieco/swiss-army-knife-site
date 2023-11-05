@@ -13,10 +13,10 @@ function StopwatchPanel() {
   };
 
   return (
-    <div className="flex flex-col gap-y-10">
+    <div className="w-full px-[5%] text-end">
       <button
         type="button"
-        className="w-fit cursor-pointer select-none self-end rounded-lg bg-green-500 p-2 py-0 pb-1 text-4xl font-bold shadow-sm shadow-white active:scale-95"
+        className="mb-2 mt-10 cursor-pointer select-none rounded-lg bg-green-500 p-2 pb-1 pt-0 text-4xl font-bold shadow-sm shadow-white active:scale-95"
         onClick={addStopwatch}
       >
         +
