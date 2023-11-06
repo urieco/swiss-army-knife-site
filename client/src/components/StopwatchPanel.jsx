@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import Stopwatch from './stopwatch/Stopwatch';
+import idGenerator from '../utils/idGenerator';
 
 function StopwatchPanel() {
-  const [stopwatchNumber, setStopwatchNumber] = useState([0]);
+  const [stopwatchNumber, setStopwatchNumber] = useState([
+    { id: 'ori', value: 0 },
+  ]);
 
   const addStopwatch = () => {
-    setStopwatchNumber((prev) => [...prev, prev[prev.length - 1] + 1]);
+    setStopwatchNumber((prev) => [...prev, {
+      id: idGenerator(),
+      value: prev[prev.length - 1] + 1,
+    }]);
   };
 
   const deleteStopwatch = (index) => {
@@ -23,7 +29,7 @@ function StopwatchPanel() {
       </button>
       {stopwatchNumber.map((item) => (
         <Stopwatch
-          key={item}
+          key={item.id}
           deleteStopwatch={() => deleteStopwatch(item)}
         />
       ))}
