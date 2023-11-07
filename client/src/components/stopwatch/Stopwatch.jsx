@@ -70,7 +70,7 @@ function Stopwatch({ deleteStopwatch }) {
           </button>
           <button
             type="button"
-            className="absolute left-14 top-3 mr-2 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-gray-200 duration-300 active:rotate-180 active:scale-95 md:static md:w-auto md:px-1"
+            className="absolute left-14 top-3 ml-2 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-gray-200 duration-300 active:rotate-180 active:scale-95 md:static md:w-auto md:px-1"
           >
             <GrPowerReset
               className="text-4xl"

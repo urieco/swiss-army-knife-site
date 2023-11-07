@@ -26,7 +26,7 @@ function StopwatchLabel() {
             <div className="grid h-12 grid-cols-12 gap-x-2 text-2xl">
               <input
                 name="stopwatchLabel"
-                className="col-span-8 h-full rounded-lg border-none pl-2 text-2xl text-black"
+                className="col-span-8 h-full rounded-lg border-none pl-2 text-2xl text-black lg:col-span-10"
                 placeholder={!label ? 'Label' : label}
                 onChange={(e) => setLabel(e.currentTarget.value)}
                 onKeyDown={handleKeyDown}
@@ -35,14 +35,14 @@ function StopwatchLabel() {
                 type="color"
                 name="labelColorPicker"
                   // eslint-disable-next-line tailwindcss/classnames-order
-                className="col-span-2 appearance-none w-auto h-full border-2 cursor-pointer"
+                className="col-span-2 appearance-none w-auto h-full border-2 cursor-pointer lg:col-span-1"
                 value={labelColor}
                 onChange={(e) => setLabelColor(e.target.value)}
               />
               <button
                 type="button"
                 name="labelPicker"
-                className="col-span-2 flex items-center justify-center rounded-lg bg-green-500 text-2xl shadow-sm shadow-white active:scale-95 active:shadow-none"
+                className="col-span-2 flex items-center justify-center rounded-lg bg-green-500 text-2xl shadow-sm shadow-white active:scale-95 active:shadow-none lg:col-span-1"
                 onClick={() => setEdit(false)}
               >
                 <AiOutlineArrowRight />
