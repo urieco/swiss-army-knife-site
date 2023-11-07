@@ -3,9 +3,7 @@ import Stopwatch from './stopwatch/Stopwatch';
 import idGenerator from '../utils/idGenerator';
 
 function StopwatchPanel() {
-  const [stopwatchNumber, setStopwatchNumber] = useState([
-    { id: 'ori', value: 0 },
-  ]);
+  const [stopwatchNumber, setStopwatchNumber] = useState(['base0']);
 
   const addStopwatch = () => {
     setStopwatchNumber((prev) => [...prev, {
@@ -29,7 +27,7 @@ function StopwatchPanel() {
       </button>
       {stopwatchNumber.map((item) => (
         <Stopwatch
-          key={item.id}
+          key={item}
           deleteStopwatch={() => deleteStopwatch(item)}
         />
       ))}
