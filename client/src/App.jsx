@@ -1,11 +1,9 @@
 import React from 'react';
-import StopwatchPanel from './components/StopwatchPanel';
+import RouteSwitch from './RouteSwitch';
 
 function App() {
   return (
-    <div className="text-white">
-      <StopwatchPanel />
-    </div>
+    <RouteSwitch />
   );
 }
 
