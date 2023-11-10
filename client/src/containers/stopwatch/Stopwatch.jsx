@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+
 import { AiFillPauseCircle, AiFillPlayCircle } from 'react-icons/ai';
 import { GrPowerReset } from 'react-icons/gr';
-import TimeDisplay from './subcomponents/TimeDisplay';
+
 import StopwatchLabel from './subcomponents/StopwatchLabel';
+
+import TimeDisplay from '../../components/stopwatch/subcomponents/TimeDisplay';
 
 function Stopwatch({ deleteStopwatch }) {
   const [isRunning, setIsRunning] = useState(false);

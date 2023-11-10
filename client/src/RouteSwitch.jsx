@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import StopwatchPanel from './components/StopwatchPanel';
+import StopwatchPanel from './containers/StopwatchPanel';
 
 function RouteSwitch() {
   return (
