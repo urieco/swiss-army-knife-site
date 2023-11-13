@@ -6,10 +6,7 @@ function StopwatchPanel() {
   const [stopwatchNumber, setStopwatchNumber] = useState(['base0']);
 
   const addStopwatch = () => {
-    setStopwatchNumber((prev) => [...prev, {
-      id: idGenerator(),
-      value: prev[prev.length - 1] + 1,
-    }]);
+    setStopwatchNumber((prev) => [...prev, idGenerator(5)]);
   };
 
   const deleteStopwatch = (index) => {
